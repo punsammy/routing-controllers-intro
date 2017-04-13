@@ -1,1 +1,64 @@
-example@form page
+<h5>Please fill out the application below</h5>
+
+<%= form_for @job_application do |new_job_application|%>
+  <div class="new_job_application">
+    <%= new_job_application.label :full_name %>
+    <%= new_job_application.text_field :full_name %>
+  </div>
+</br>
+  <div class="new_job_application">
+    <%= new_job_application.label :phone %>
+    <%= new_job_application.text_field :phone %>
+  </div>
+</br>
+  <div class="new_job_application">
+    <%= new_job_application.label :hobby %>
+    <%= new_job_application.text_field :hobby %>
+  </div>
+</br>
+  <div class="new_job_application">
+    <%= new_job_application.label :years_experience %>
+    <%= new_job_application.date_field :years_experience %>
+  </div>
+</br>
+  <div class="new_job_application">
+    <%= new_job_application.label :available_date %>
+    <%= new_job_application.date_field :available_date %>
+  </div>
+</br>
+  <div class="new_job_application">
+  <%= new_job_application.submit %>
+</div>
+
+<% end %>
+<!--
+<form class="new_job_application" id="new_job_application" action="/job_applications" accept-charset="UTF-8" method="post">
+  <p>
+    <label for="job_application_full_name">Full name</label>
+    <input type="text" name="job_application[full_name]" id="job_application_full_name" />
+  </p>
+
+  <p>
+    <label for="job_application_phone">Phone</label>
+    <input type="tel" name="job_application[phone]" id="job_application_phone" />
+  </p>
+
+  <p>
+    <label for="job_application_hobby">Hobby</label>
+    <input type="text" name="job_application[hobby]" id="job_application_hobby" />
+  </p>
+
+  <p>
+    <label for="job_application_years_experience">Years experience</label>
+    <input type="number" name="job_application[years_experience]" id="job_application_years_experience" />
+  </p>
+
+  <p>
+    <label for="job_application_available_date">Available date</label>
+    <input type="date" name="job_application[available_date]" id="job_application_available_date" />
+  </p>
+
+  <p>
+    <input type="submit" name="commit" value="Create Job application" />
+  </p>
+</form> -->
